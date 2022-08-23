@@ -6,7 +6,7 @@ import requests
 import os
 import random
 
-da=os。environ['DATE.DATA']
+da=os.environ['DATE.DATA']
 today = datetime.now()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']

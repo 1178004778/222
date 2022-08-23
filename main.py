@@ -6,6 +6,7 @@ import requests
 import os
 import random
 
+da=os。environ['DATE.DATA']
 today = datetime.now()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
@@ -17,7 +18,9 @@ app_secret = os.environ["APP_SECRET"]
 user_ids = os.environ["USER_ID"].split("\n")
 template_id = os.environ["TEMPLATE_ID"]
 
-
+data={
+  "date":{"value":da,"color":get_date_color()},
+          
 def get_weather():
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
   res = requests.get(url).json()
